@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> Online Unicode encoding conversion </title>
+    <meta name="keywords" content="Online Unicode encoding conversion">
+    <meta name="description"
+          content="This tool provides online Unicode encoding conversion, which can convert Chinese to Unicode, Unicode to Chinese, ASCII to Unicode, and Unicode to ASCII. Enter the content to be converted in the text box, and then click the button of the type to be converted. After the conversion is completed, you can See the corresponding content...">
+    <link rel="shortcut icon" href="https://static.runoob.com/images/c-runoob-logo.ico">
+    <script src="//cdn.staticfile.org/codemirror/5.48.2/codemirror.min.js"></script>
+    <script src="https://cdn.staticfile.org/codemirror/5.48.2/addon/mode/simple.min.js"></script>
+    <link rel="stylesheet" href="//cdn.staticfile.org/codemirror/5.48.2/codemirror.min.css">
+
+
+    <script src="//cdn.staticfile.org/codemirror/5.48.2/mode/htmlmixed/htmlmixed.js"></script>
+
+    <script src="//cdn.staticfile.org/codemirror/5.48.2/mode/css/css.js"></script>
+
+    <script src="//cdn.staticfile.org/codemirror/5.48.2/mode/javascript/javascript.js"></script>
+
+    <script src="//cdn.staticfile.org/codemirror/5.48.2/mode/xml/xml.js"></script>
+    <script src="https://c.runoob.com/wp-content/themes/toolrunoob2/assets/js/format.js"></script>
+
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="https://c.runoob.com/wp-content/themes/toolrunoob2/bootstrap.min.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://cdn.staticfile.org/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+    <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- PHP 代码 -->
+    <link rel="stylesheet" href="https://c.runoob.com/wp-content/themes/toolrunoob2/style.css?version=1.309">
+
+    <script src="https://cdn.staticfile.org/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js"></script>
+
+</head>
+
+<body>
+
+
+<style>
+.runoob-page-content {
+    margin: 0 20px;
+}
+
+</style>
+<div class="runoob-page-content">
+
+
+    <div class="row">
+
+        <div class="col-md-12">
+            <div class="card">
+                <div id="compiler" class="card-header">
+                    <form class="form-inline" role="form">
+                        <div class="col-md-8">
+                            <button type="button" class="btn btn-outline-dark mr-1" onclick="u2h()">Unicode to Chinese
+                            </button>
+                            <button type="button" class="btn btn-outline-dark mr-1" onclick="h2u()">Chinese to Unicode
+                            </button>
+                            <button type="button" class="btn btn-outline-dark mr-1" id="asicctounicode">ASCII 转
+                                Unicode
+                            </button>
+                            <button type="button" class="btn btn-outline-dark mr-1" id="unicodetoasicc">Unicode 转
+                                ASCII
+                            </button>
+                            <button type="button" class="btn btn-outline-danger mr-1" id="clear">清空结果</button>
+                            <a target="_blank" href="https://c.runoob.com/front-end/6318/"
+                               class="btn btn-outline-primary mr-1">ASCII 表</a>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="float-right"><strong style="font-size: 16px"><i class="fa fa-cogs"></i> Online Unicode encoding conversion </strong>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-body">
+                    <form role="form" id="compiler-form">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <textarea class="form-control" id="code" name="code" rows="10"></textarea>
+                                </div>
+                                <div class="col-md-6">
+                                    <textarea placeholder="运行结果……" class="form-control"
+                                              id="compiler-textarea-result" rows="10"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script>
+
+var editor1 = CodeMirror.fromTextArea(document.getElementById("code"), {
+	lineNumbers: true,
+	matchBrackets: true,
+	mode: "text/html",
+	indentUnit: 4,
+	indentWithTabs: true,
+});
+var editor2 = CodeMirror.fromTextArea(document.getElementById("compiler-textarea-result"), {
+	lineNumbers: true,
+	lineWrapping: true,
+	matchBrackets: true,
+	mode: "text/html",
+	indentUnit: 4,
+	indentWithTabs: true,
+});
+
+
+//ASCII 转换 Unicode
+$("#asicctounicode").click(function () {
+    if (editor1.getValue() == '') {
+        alert('文本框中没有代码！');
+        return;
+    }
+    editor2.getDoc().setValue('');
+    result_var = '';
+    for (var i = 0; i < editor1.getValue().length; i++)
+        result_var += '&#' + editor1.getValue().charCodeAt(i) + ';';
+    //editor1.focus();
+	editor2.getDoc().setValue(result_var);
+});
+//Unicode 转换 ASCII
+$("#unicodetoasicc").click(function () {
+    var code =  editor1.getValue().match(/&#(\d+);/g);
+    if (code == null) {
+        alert('文本框中没有合法的Unicode代码！');
+        editor1.focus();
+        return;
+    }
+	editor2.getDoc().setValue('');
+	result_var = '';
+    for (var i = 0; i < code.length; i++)
+        result_var += String.fromCharCode(code[i].replace(/[&#;]/g, ''));
+     editor2.getDoc().setValue(result_var);
+    
+});
+$("#clear").click(function () {
+    editor1.getDoc().setValue('');
+    editor2.getDoc().setValue('');
+});
+var GB2312UnicodeConverter={
+	ToUnicode:function(str){
+	var txt= escape(str).toLocaleLowerCase().replace(/%u/gi,'\\u');
+	//var txt= escape(str).replace(/([%3F]+)/gi,'\\u');
+	return txt.replace(/%7b/gi,'{').replace(/%7d/gi,'}').replace(/%3a/gi,':').replace(/%2c/gi,',').replace(/%27/gi,'\'').replace(/%22/gi,'"').replace(/%5b/gi,'[').replace(/%5d/gi,']').replace(/%3D/gi,'=').replace(/%20/gi,' ').replace(/%3E/gi,'>').replace(/%3C/gi,'<').replace(/%3F/gi,'?').replace(/%5c/gi,'\\');//
+	}
+	,ToGB2312:function(str){
+	return unescape(str.replace(/\\u/gi,'%u'));
+	}
+};
+
+function u2h(){
+	text = $.trim(editor1.getValue());
+	text = GB2312UnicodeConverter.ToGB2312(text);
+	editor2.getDoc().setValue(text);
+}
+
+function h2u(){
+	text = $.trim(editor1.getValue());
+	text = GB2312UnicodeConverter.ToUnicode(text);
+	editor2.getDoc().setValue(text);
+}
+		
+
+
+
+    </script>
+
+
+</div>
+
+
+
+<script src="https://cdn.staticfile.org/bootstrap/4.6.0/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script>
+
+
+$(function() {
+	//代码高亮
+	$('pre').each(function() {
+		if(!$(this).hasClass("prettyprint")) {
+			$(this).addClass("prettyprint");
+		}
+	});
+
+  
+</script>
+
+</body>
+
+</html>
