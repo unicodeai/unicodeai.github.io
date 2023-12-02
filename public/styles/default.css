@@ -456,7 +456,7 @@ svg:not(:root) {
     overflow: hidden
 }
 
-button,
+/* button,
 input,
 optgroup,
 select,
@@ -497,7 +497,7 @@ button:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
     outline: 1px dotted ButtonText
-}
+} */
 
 fieldset {
     padding: 0.35em 0.75em 0.625em
@@ -578,13 +578,13 @@ html {
     box-sizing: inherit
 }
 
-button,
+/* button,
 input,
 optgroup,
 select,
 textarea {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif
-}
+} */
 
 /* ul:not(.browser-default) {
     padding-left: 0;
@@ -876,10 +876,10 @@ select:focus {
     outline: 1px solid #c9f3ef
 }
 
-button:focus {
+/* button:focus {
     outline: none;
     background-color: #2ab7a9
-}
+} */
 
 label {
     font-size: .8rem;

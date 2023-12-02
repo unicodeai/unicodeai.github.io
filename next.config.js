@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const { withContentlayer } = require('next-contentlayer')
-
 const nextConfig = {
-  output:"export",
-  distDir:"dist",
-  reactStrictMode: true, 
+  output: "export",
+  distDir: "dist",
+  trailingSlash: false, // 或者不设置这个选项
+  reactStrictMode: true,
   swcMinify: true,
   // experimental: {
   //   reactRoot: true, // 启用 "use client" 指令

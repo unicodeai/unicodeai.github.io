@@ -11,15 +11,24 @@ import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import { Metadata } from "next";
 import React from 'react';
-
+import { i18n, languages } from '@/lib/i18n/i18n'
+interface LangPageProps {
+  params: {
+    lng: string
+  }
+}
 
 export const metadata: Metadata = {
   title: "Free Next.js Template for Startup and SaaS",
   description: "This is Home for Startup Nextjs Template",
   // other metadata
 };
+export async function generateStaticParams(): Promise<LangPageProps["params"][]> {
+  return Object.keys(languages).map((l) => ({ lng: l }))
+}
 
-export default function Home() {
+
+export default function Home({ params }: LangPageProps) {
   return (
     <>
       <ScrollUp />

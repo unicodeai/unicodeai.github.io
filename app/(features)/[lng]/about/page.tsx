@@ -1,7 +1,17 @@
 
-import { i18n, languages } from '@/i18n/i18n'
+import { Metadata } from "next";
 import React from 'react';
-import Layout from '@/app/layout';
+import AboutSectionOne from "@/components/About/AboutSectionOne";
+import AboutSectionTwo from "@/components/About/AboutSectionTwo";
+import Breadcrumb from "@/components/Common/Breadcrumb";
+import { i18n, languages } from '@/lib/i18n/i18n'
+
+
+export const metadata: Metadata = {
+    title: "About Page | Free Next.js Template for Startup and SaaS",
+    description: "This is About Page for Startup Nextjs Template",
+    // other metadata
+};
 interface LangPageProps {
     params: {
         lng: string
@@ -13,29 +23,17 @@ export async function generateStaticParams(): Promise<LangPageProps["params"][]>
 }
 
 
-
-// const MyPage = ({ params }: LangPageProps) => {
-//   return (
-//     <Layout>
-//       <div>
-//         <h1>Page Content</h1>
-//         {/* Other page-specific content */}
-//       </div>
-//     </Layout>
-//   );
-// };
-
-// export default MyPage
-const CustomFragment = ({ extraparam, children }) => {
-    // 在这里可以使用 extraParam
-    return <>{React.Children.map(children, child => React.cloneElement(child, { extraparam }))}</>;
-};
-
-export default async function HomePage({ params }: LangPageProps) {
+export default async function AboutPage({ params }: LangPageProps) {
     i18n.locale(params.lng);
     return (
-        <React.Fragment>
-            <div>xcc</div>
-        </React.Fragment>
+        <>
+            <Breadcrumb
+                pageName="About Page"
+                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+            />
+            <AboutSectionOne />
+            <AboutSectionTwo />
+
+        </>
     );
 };

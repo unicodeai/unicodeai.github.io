@@ -7,10 +7,10 @@ import { Inter } from "next/font/google";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "@/public/styles/index.css";
 import "@/public//styles/default.css";
-import { i18n, languages, locale } from '@/i18n/i18n'
+import { i18n, languages, locale } from '@/lib/i18n/i18n'
 import { usePathname, useSearchParams } from 'next/navigation'
 const inter = Inter({ subsets: ["latin"] });
-
+import StyledComponentsRegistry from '@/lib/AntdRegistry';
 
 
 export default function RootLayout({
@@ -18,12 +18,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
-  // i18n.locale('en')
-  // console.log("layout",locale())
+  const pathname = usePathname()
 
   return (
-    <html suppressHydrationWarning lang={locale()}>
+    <html suppressHydrationWarning lang={locale(pathname)}>
       {/*
         <head /> will contain the components returned by the nearest parent
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
@@ -33,7 +31,8 @@ export default function RootLayout({
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
         <Providers>
           <Header />
-          {children}
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+          {/* {children} */}
           <Footer />
           <ScrollToTop />
         </Providers>

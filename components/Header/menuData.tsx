@@ -1,50 +1,43 @@
-import { Menu } from "@/types/menu";
-import { languages } from '@/i18n/i18n'
+import { Menu } from "@/lib/types/menu";
+import { languages, locale, i18n } from '@/lib/i18n/i18n'
 
-const AllFeatures = ['about', 'feature1'].reduce((accumulator, currentValue, index) => {
-  let all_features = Object.keys(languages).map((lang) => {
-    return {
-      id: 40 + index + 1,
-      title: currentValue,
-      path: `/${lang}/${currentValue}.html`,
+
+export const getMenuData = (pathname) => {
+  const lang = locale(pathname)
+  i18n.locale(lang)
+  const prefix = lang === 'en' ? "" : `/${lang}`
+  const menuData: Menu[] = [
+    {
+      id: 1,
+      title: i18n.t("Menu.Home"),
+      path: prefix ? prefix : "/",
       newTab: false,
-    }
-  })
-  return accumulator.concat(all_features)
-}, []);
-
-const menuData: Menu[] = [
-  {
-    id: 1,
-    title: "Home",
-    path: "/",
-    newTab: false,
-  },
-  {
-    id: 2,
-    title: "About",
-    path: "/about",
-    newTab: false,
-  },
-  {
-    id: 33,
-    title: "Blog",
-    path: "/blogs",
-    newTab: false,
-  },
-  {
-    id: 4,
-    title: "Feature",
-    newTab: false,
-    submenu: AllFeatures
-    // [
-    // {
-    //   id: 41,
-    //   title: "About Page",
-    //   path: "/about",
-    //   newTab: false,
-    // },
-    // ],
-  },
-];
-export default menuData;
+    },
+    {
+      id: 2,
+      title: i18n.t("Menu.About"),
+      path: prefix ? `${prefix}/about` : `/en/about`,
+      newTab: false,
+    },
+    {
+      id: 33,
+      title: i18n.t("Menu.Blog"),
+      path: `/blogs`,
+      newTab: false,
+    },
+    {
+      id: 4,
+      title: i18n.t("Menu.Feature"),
+      newTab: false,
+      submenu: [
+        {
+          id: 41,
+          title: "About",
+          path: `${prefix}/about`,
+          newTab: false,
+        }
+      ],
+    },
+  ];
+  return menuData
+}
