@@ -1,5 +1,0 @@
-User-Agent: *
-Allow: /
-Disallow: /private
-Disallow: /en/about.html
-Disallow: /cn/about.html
