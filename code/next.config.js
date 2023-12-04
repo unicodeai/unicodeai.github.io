@@ -1,9 +1,12 @@
-/** @type {import('next').NextConfig} */
-const { withContentlayer } = require('next-contentlayer')
+/** @type {import("next").NextConfig} */
+const { withContentlayer } = require("next-contentlayer");
+const path = require("path");
+
 const nextConfig = {
   output: "export",
   distDir: "dist",
-  trailingSlash: false, // 或者不设置这个选项
+  trailingSlash: true,
+  // trailingSlash: false, // 或者不设置这个选项
   reactStrictMode: true,
   swcMinify: true,
   // experimental: {
@@ -20,10 +23,19 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "cdn.sanity.io",
-        port: "",
-      },
-    ],
+        port: ""
+      }
+    ]
   },
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // 修改输出路径
+    // if (!dev) {
+    //   config.output.publicPath = "/_next/";
+    //   config.output.path = path.join(__dirname, "dist", "");
+    // }
+
+    return config;
+  }
 };
 
 module.exports = withContentlayer(nextConfig);
