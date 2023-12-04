@@ -133,6 +133,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <a
+                      rel="nofollow noreferrer"
                       href="/contact"
                       className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
                     >
@@ -141,6 +142,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
+                      rel="nofollow noreferrer"
                       href="/privacy.html"
                       target="_blank"
                       className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
@@ -158,6 +160,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
+                      rel="nofollow noreferrer"
                       href="https://github.com/blognextjs/blognextjs.github.io/discussions/new?category=announcements&welcome_text=true"
                       className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
                     >
@@ -168,7 +171,6 @@ const Footer = () => {
               </div>
             </div>
           </div>
-
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
             <p className="text-center text-base text-body-color dark:text-white">

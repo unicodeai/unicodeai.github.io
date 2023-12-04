@@ -26,15 +26,6 @@ const nextConfig = {
         port: ""
       }
     ]
-  },
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // 修改输出路径
-    // if (!dev) {
-    //   config.output.publicPath = "/_next/";
-    //   config.output.path = path.join(__dirname, "dist", "");
-    // }
-
-    return config;
   }
 };
 
