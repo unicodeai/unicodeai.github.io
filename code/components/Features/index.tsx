@@ -9,7 +9,7 @@ const Features = () => {
         <div className="container">
           <SectionTitle
             title="Main Features"
-            paragraph="为什么选择这个模板，有啥好处"
+            paragraph="Why choose this template and what are the benefits?"
             center
           />
 

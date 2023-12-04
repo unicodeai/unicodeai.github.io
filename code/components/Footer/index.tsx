@@ -17,8 +17,8 @@ const Footer = () => {
                   <LogoSVG />
                 </Link>
                 <p className="dark:text-body-color-dark mb-9 text-base leading-relaxed text-body-color">
-                  旨在帮助大家专心创作，而不是浪费时间在SEO、国际化和Robots等琐事
-                  本产品免费开放给大家使用.
+                  Designed to help everyone focus on creation instead of wasting time on trivial matters such as SEO, internationalization,
+                  and Robots. This product is free and open to everyone.
                 </p>
                 <div className="flex items-center">
                   <a
@@ -115,13 +115,12 @@ const Footer = () => {
                 <ul>
                   <li>
                     <a
-                      href="/"
+                      href="/components"
                       className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
                     >
-                      TOS
+                      Components
                     </a>
                   </li>
-
                 </ul>
               </div>
             </div>
@@ -151,10 +150,18 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="/about"
+                      href="/contact"
                       className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
                     >
-
+                      Contact
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://github.com/blognextjs/blognextjs.github.io/discussions/new?category=announcements&welcome_text=true"
+                      className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
+                    >
+                      Discussions
                     </a>
                   </li>
                 </ul>

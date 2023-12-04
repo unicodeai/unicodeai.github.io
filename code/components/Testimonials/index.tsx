@@ -7,8 +7,7 @@ const testimonialData: Testimonial[] = [
     id: 1,
     name: "Musharof Chy",
     designation: "Founder @TailGrids",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+    content:"A very easy-to-use blog template that is friendly even for users who are not familiar with programming.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
@@ -16,8 +15,7 @@ const testimonialData: Testimonial[] = [
     id: 2,
     name: "Devid Weilium",
     designation: "Founder @UIdeck",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+    content:"Excellent technology choice, the Next.js framework ensures high performance and fast loading speeds for the blog.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
@@ -25,8 +23,7 @@ const testimonialData: Testimonial[] = [
     id: 3,
     name: "Lethium Frenci",
     designation: "Founder @Lineicons",
-    content:
-      "Our members are so impressed. It's intuitive. It's clean. It's distraction free. If you're building a community.",
+    content: "I love how extensible the templates are, allowing me to personalize them to suit my needs.",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
@@ -38,10 +35,9 @@ const Testimonials = () => {
       <div className="container">
         <SectionTitle
           title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="Next.js blog template comes with built-in comment components, which are easy for users to modify and use, and support personalized extensions."
           center
         />
-
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           {testimonialData.map((testimonial) => (
             <SingleTestimonial key={testimonial.id} testimonial={testimonial} />

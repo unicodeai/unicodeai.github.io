@@ -12,7 +12,7 @@ const Pricing = () => {
       <div className="container">
         <SectionTitle
           title="Next js blog template - Pricing Component"
-          paragraph="nextjs blog template 的价格组件，简洁好看, 支持年付和月付"
+          paragraph="The price component in the Next.js blog template has a simple and beautiful design, and provides flexible annual and monthly payment options to meet the needs of different users."
           center
           width="665px"
         />
@@ -65,40 +65,40 @@ const Pricing = () => {
             packageName="Lite"
             price={isMonthly ? "40" : "120"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Lite version price introduction"
           >
-            <OfferList text="很多 UI Components" status="active" />
-            <OfferList text="支持国家化" status="active" />
-            <OfferList text="SEO优化" status="active" />
+            <OfferList text="Many UI Components" status="active" />
+            <OfferList text="Support nationalization" status="active" />
+            <OfferList text="SEO optimization" status="active" />
             <OfferList text="Email Support" status="active" />
-            <OfferList text="支持MDX" status="inactive" />
-            <OfferList text="支持Robots" status="inactive" />
+            <OfferList text="MDX supported" status="inactive" />
+            <OfferList text="Robots.txt supported" status="inactive" />
           </PricingBox>
           <PricingBox
             packageName="Basic"
             price={isMonthly ? "399" : "789"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Basic version price introduction"
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="支持国家化" status="active" />
-            <OfferList text="SEO优化" status="active" />
+            <OfferList text="Many UI Components" status="active" />
+            <OfferList text="Support nationalization" status="active" />
+            <OfferList text="SEO optimization" status="active" />
             <OfferList text="Email Support" status="active" />
-            <OfferList text="支持MDX" status="active" />
-            <OfferList text="支持Robots" status="inactive" />
+            <OfferList text="MDX supported" status="active" />
+            <OfferList text="Robots.txt supported" status="inactive" />
           </PricingBox>
           <PricingBox
             packageName="Plus"
             price={isMonthly ? "589" : "999"}
             duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
+            subtitle="Plus version price introduction"
           >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="支持国家化" status="active" />
-            <OfferList text="SEO优化" status="active" />
+            <OfferList text="Many UI Components" status="active" />
+            <OfferList text="Support nationalization" status="active" />
+            <OfferList text="SEO optimization" status="active" />
             <OfferList text="Email Support" status="active" />
-            <OfferList text="支持MDX" status="active" />
-            <OfferList text="支持Robots" status="active" />
+            <OfferList text="MDX supported" status="active" />
+            <OfferList text="Robots.txt supported" status="active" />
           </PricingBox>
         </div>
       </div>

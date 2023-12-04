@@ -24,8 +24,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="想建一个博客为什么这么难？"
-                paragraph="费尽力气搭建了博客，搜索引擎不收录。搜索引擎收录了，访问量却低的可怕。到底是因为什么呢？"
+                title="Why is it so difficult to start a blog?"
+                paragraph="I put a lot of effort into setting up a blog, but search engines don’t include it. Search engines include it, but the number of visits is horribly low. What is the reason?"
                 mb="44px"
               />
 
@@ -35,15 +35,15 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="样式设计太丑" />
-                    <List text="选用的模板不利于SEO" />
-                    <List text="HTML标签乱用" />
+                    <List text="The style design is too ugly" />
+                    <List text="The template chosen is not conducive to SEO" />
+                    <List text="Indiscriminate use of HTML tags" />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Robots.txt不合理" />
-                    <List text="超链接不利于SEO" />
-                    <List text="搜索引擎展示结果差" />
+                    <List text="Robots.txt is unreasonable" />
+                    <List text="Hyperlinks are bad for SEO" />
+                    <List text="Poor search engine results" />
                   </div>
                 </div>
               </div>

@@ -20,6 +20,7 @@ export default function RootLayout({
 }) {
   const pathname = usePathname()
 
+
   return (
     <html suppressHydrationWarning lang={locale(pathname)}>
       {/*

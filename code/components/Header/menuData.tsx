@@ -32,12 +32,6 @@ export const getMenuData = (pathname) => {
       newTab: false,
     },
     {
-      id: 33,
-      title: i18n.t("Menu.Contact"),
-      path: `/contact`,
-      newTab: false,
-    },
-    {
       id: 4,
       title: i18n.t("Menu.Feature"),
       newTab: false,
