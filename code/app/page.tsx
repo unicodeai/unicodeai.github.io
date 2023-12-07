@@ -5,8 +5,8 @@ import React from "react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Free and SEO-friendly blog template for programmer",
-  description: "Free and SEO-friendly blog template supports multiple languages to help you create an amazing and diverse blog experience!"
+  title: "unicode to bijoy converter ",
+  description: "Encoding changes between unicode and bijoy"
 };
 
 export default function Home() {

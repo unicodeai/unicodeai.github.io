@@ -17,17 +17,16 @@ const Features = () => {
   };
 
   const convertToUnicode = (e) => {
-    setTextValue2(ConvertToUnicode("bijoy", e.target.value));
+    setTextValue2(ConvertToUnicode("bijoy", textValue1));
   };
   const convertToASCII = (e) => {
-    setTextValue2(ConvertToASCII("bijoy", e.target.value));
+    setTextValue2(ConvertToASCII("bijoy", textValue1));
   };
+
   return (
     <>
       <section id="features-unicode"
                className="dark:bg-gray-dark relative z-10 overflow-hidden bg-white pb-16 pt-[150px] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]">
-        <script src="/js/bijoy2uni.js" />
-        <script src="/js/uni2bijoy.js" />
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
             <div className="wow fadeInUp mx-auto max-w-[800px] text-center" data-wow-delay=".2s">
