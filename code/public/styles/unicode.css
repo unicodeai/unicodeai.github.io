@@ -1,0 +1,37 @@
+.features-unicode .responsive-flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.features-unicode .responsive-flex .flex-item {
+    flex-grow: 1;
+    min-width: 300px;
+    margin: 10px;
+}
+
+.features-unicode {
+    width: 95%;
+    margin: 0 auto 50px;
+}
+
+
+
+.features-unicode .operation  {
+    margin-top: 20px;
+    justify-content: center;
+}
+
+/* .features-unicode .operation .item {
+    width: 95%;
+    margin: 50px auto 50px;
+} */
+
+@media (max-width: 600px) {
+    .features-unicode {
+        width: 98%;
+    }
+
+    .features-unicode .responsive-flex .flex-item {
+        flex-basis: 100%;
+    }
+}

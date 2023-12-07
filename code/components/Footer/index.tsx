@@ -17,8 +17,8 @@ const Footer = () => {
                   <LogoSVG />
                 </Link>
                 <p className="dark:text-body-color-dark mb-9 text-base leading-relaxed text-body-color">
-                  Designed to help everyone focus on creation instead of wasting time on trivial matters such as SEO, internationalization,
-                  and Robots. This product is free and open to everyone.
+                Unicode is a standard character encoding that supports almost all writing systems in the world, 
+                while Bijoy encoding is an encoding system widely used in specific regions for inputting and displaying Bengali.
                 </p>
                 <div className="flex items-center">
                   <a
