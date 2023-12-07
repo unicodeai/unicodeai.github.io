@@ -9,7 +9,7 @@ const Features = () => {
         <div className="container">
           <SectionTitle
             title="Main Features"
-            paragraph="Why choose this template and what are the benefits?"
+            paragraph="Why choose unicode to bijoy online converter?"
             center
           />
 

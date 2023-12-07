@@ -509,7 +509,6 @@ var boisakhi_string_conversion_map = {
     "Yð": "ণ্ব",
     "ª": "ন্ঠ",
     "£ò": "ত্ত্ব",
-    "¤": "ত্থ",
     "Zí": "ত্ন",
     "£ô": "ত্ম",
     "Zô": "ত্ম",
@@ -692,6 +691,75 @@ var boisakhi_string_conversion_map = {
     "ê": "র্",
     "ø": "্য"
 };
+
+function IsBanglaDigit(CUni) {
+    if (CUni == '০' || CUni == '১' || CUni == '২' || CUni == '৩' || CUni == '৪' || CUni == '৫' || CUni == '৬' || CUni == '৭' || CUni == '৮' || CUni == '৯')
+        return true; return false;
+}
+function IsBanglaPreKar(CUni) {
+    if (CUni == 'ি' || CUni == 'ৈ' || CUni == 'ে')
+        return true; return false;
+}
+function IsBanglaPostKar(CUni) {
+    if (CUni == 'া' || CUni == 'ো' || CUni == 'ৌ' || CUni == 'ৗ' || CUni == 'ু' || CUni == 'ূ' || CUni == 'ী' || CUni == 'ৃ')
+        return true; return false;
+}
+function IsBanglaKar(CUni) {
+    if (IsBanglaPreKar(CUni) || IsBanglaPostKar(CUni))
+        return true; return false;
+}
+function IsBanglaBanjonborno(CUni) {
+    if (CUni == 'ক' || CUni == 'খ' || CUni == 'গ' || CUni == 'ঘ' || CUni == 'ঙ' || CUni == 'চ' || CUni == 'ছ' || CUni == 'জ' || CUni == 'ঝ' || CUni == 'ঞ' || CUni == 'ট' || CUni == 'ঠ' || CUni == 'ড' || CUni == 'ঢ' || CUni == 'ণ' || CUni == 'ত' || CUni == 'থ' || CUni == 'দ' || CUni == 'ধ' || CUni == 'ন' || CUni == 'প' || CUni == 'ফ' || CUni == 'ব' || CUni == 'ভ' || CUni == 'ম' || CUni == 'শ' || CUni == 'ষ' || CUni == 'স' || CUni == 'হ' || CUni == 'য' || CUni == 'র' || CUni == 'ল' || CUni == 'য়' || CUni == 'ং' || CUni == 'ঃ' || CUni == 'ঁ' || CUni == 'ৎ')
+        return true; return false;
+}
+function IsBanglaSoroborno(CUni) {
+    if (CUni == 'অ' || CUni == 'আ' || CUni == 'ই' || CUni == 'ঈ' || CUni == 'উ' || CUni == 'ঊ' || CUni == 'ঋ' || CUni == 'ঌ' || CUni == 'এ' || CUni == 'ঐ' || CUni == 'ও' || CUni == 'ঔ')
+        return true; return false;
+}
+function IsBanglaNukta(CUni) {
+    if (CUni == 'ং' || CUni == 'ঃ' || CUni == 'ঁ')
+        return true; return false;
+}
+function IsBanglaFola(CUni) {
+    if (CUni == "্য" || CUni == "্র")
+        return true; return false;
+}
+function IsBanglaHalant(CUni) {
+    if (CUni == '্')
+        return true; return false;
+}
+function IsSpace(C) {
+    if (C == ' ' || C == '\t' || C == '\n' || C == '\r')
+        return true; return false;
+}
+function MapKarToSorborno(CUni) {
+    var CSorborno = CUni; if (CUni == 'া')
+        CSorborno = 'আ'; else if (CUni == 'ি')
+        CSorborno = 'ই'; else if (CUni == 'ী')
+        CSorborno = 'ঈ'; else if (CUni == 'ু')
+        CSorborno = 'উ'; else if (CUni == 'ূ')
+        CSorborno = 'ঊ'; else if (CUni == 'ৃ')
+        CSorborno = 'ঋ'; else if (CUni == 'ে')
+        CSorborno = 'এ'; else if (CUni == 'ৈ')
+        CSorborno = 'ঐ'; else if (CUni == 'ো')
+        CSorborno = 'ও'; else if (CUni == "ো")
+        CSorborno = 'ও'; else if (CUni == 'ৌ')
+        CSorborno = 'ঔ'; else if (CUni == "ৌ")
+        CSorborno = 'ঔ'; return CSorborno;
+}
+function MapSorbornoToKar(CUni) {
+    var CKar = CUni; if (CUni == 'আ')
+        CKar = 'া'; else if (CUni == 'ই')
+        CKar = 'ি'; else if (CUni == 'ঈ')
+        CKar = 'ী'; else if (CUni == 'উ')
+        CKar = 'ু'; else if (CUni == 'ঊ')
+        CKar = 'ূ'; else if (CUni == 'ঋ')
+        CKar = 'ৃ'; else if (CUni == 'এ')
+        CKar = 'ে'; else if (CUni == 'ঐ')
+        CKar = 'ৈ'; else if (CUni == 'ও')
+        CKar = 'ো'; else if (CUni == 'ঔ')
+        CKar = 'ৌ'; return CKar;
+}
 function ReArrangeUnicodeConvertedText(str) {
     for (var i = 0; i < str.length; i++) {
         if (i > 0 && str.charAt(i) == '\u09CD' && (IsBanglaKar(str.charAt(i - 1)) || IsBanglaNukta(str.charAt(i - 1))) && i < str.length - 1) {
@@ -764,14 +832,14 @@ function ReArrangeUnicodeConvertedText(str) {
     }
     return str;
 }
-function ConvertToUnicode(ConvertFrom, line) {
+export function ConvertToUnicode(ConvertFrom, line) {
     var conversion_map = bijoy_string_conversion_map;
-    if (ConvertFrom == "bijoy")
+    if (ConvertFrom === "bijoy")
         conversion_map = bijoy_string_conversion_map;
-    else if (ConvertFrom == "somewherein")
-        conversion_map = somewherein_string_conversion_map;
-    else if (ConvertFrom == "boisakhi")
-        conversion_map = boisakhi_string_conversion_map;
+    // else if (ConvertFrom === "somewherein")
+    //     conversion_map = somewherein_string_conversion_map;
+    // else if (ConvertFrom === "boisakhi")
+    //     conversion_map = boisakhi_string_conversion_map;
     for (var ascii in conversion_map) {
         var myRegExp = new RegExp(ascii,"g");
         line = line.replace(myRegExp, conversion_map[ascii]);

@@ -17,7 +17,7 @@ const Footer = () => {
                   <LogoSVG />
                 </Link>
                 <p className="dark:text-body-color-dark mb-9 text-base leading-relaxed text-body-color">
-                Unicode is a standard character encoding that supports almost all writing systems in the world, 
+                Unicode is a standard character encoding that supports almost all writing systems in the world,
                 while Bijoy encoding is an encoding system widely used in specific regions for inputting and displaying Bengali.
                 </p>
                 <div className="flex items-center">
@@ -87,22 +87,22 @@ const Footer = () => {
                   Useful Links
                 </h2>
                 <ul>
-                  <li>
-                    <a
-                      href="/blogs"
-                      className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
-                    >
-                      Blog
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="/about"
-                      className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
-                    >
-                      About
-                    </a>
-                  </li>
+                  {/*<li>*/}
+                  {/*  <a*/}
+                  {/*    href="/blogs"*/}
+                  {/*    className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"*/}
+                  {/*  >*/}
+                  {/*    Blog*/}
+                  {/*  </a>*/}
+                  {/*</li>*/}
+                  {/*<li>*/}
+                  {/*  <a*/}
+                  {/*    href="/about"*/}
+                  {/*    className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"*/}
+                  {/*  >*/}
+                  {/*    About*/}
+                  {/*  </a>*/}
+                  {/*</li>*/}
                 </ul>
               </div>
             </div>
@@ -113,14 +113,14 @@ const Footer = () => {
                   Futures
                 </h2>
                 <ul>
-                  <li>
-                    <a
-                      href="/components"
-                      className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
-                    >
-                      Components
-                    </a>
-                  </li>
+                  {/*<li>*/}
+                  {/*  <a*/}
+                  {/*    href="/components"*/}
+                  {/*    className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"*/}
+                  {/*  >*/}
+                  {/*    Components*/}
+                  {/*  </a>*/}
+                  {/*</li>*/}
                 </ul>
               </div>
             </div>
