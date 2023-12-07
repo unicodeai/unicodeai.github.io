@@ -14,7 +14,7 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "unicode convert bijoy",
-    paragraph: "This converter will help you convert Unicode text to bijoy Asci."
+    paragraph: "This converter will help you convert Unicode text to bijoy Ascii."
   },
   {
     id: 2,
@@ -29,7 +29,7 @@ const featuresData: Feature[] = [
       </svg>
     ),
     title: "bijoy convert unicode",
-    paragraph: "This converter will help you convert bijoy Ascii text to Unicode text."
+    paragraph: "Bijoy to Unicode converter is the best and most accurate encoder in worldwide."
   },
   {
     id: 3,
