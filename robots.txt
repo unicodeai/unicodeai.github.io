@@ -7,4 +7,3 @@ Disallow: /cn/about.html
 Disallow: /contact
 Disallow: /contact.html
 Disallow: /components
-Disallow: /blogs/
