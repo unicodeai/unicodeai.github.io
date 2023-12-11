@@ -1,5 +1,6 @@
 // contentlayer.config.ts
 import { defineDocumentType, defineNestedType, makeSource,ComputedFields } from 'contentlayer/source-files'
+import remarkGfm from 'remark-gfm'
 
 /** @typed {import('contentlayer/source-files').ComputedFields}*/
 const computedFields: ComputedFields = {
@@ -44,19 +45,23 @@ export const Blog = defineDocumentType(() => ({
     },
     paragraph: {
       type: "string",
+      required: true,
+      default: "paragraph",
     },
-    image: {
+    keywords: {
       type: "string",
       required: true,
+      default: "",
     },
-    publishDate: {
-      type: "date",
+    description: {
+      type: "string",
       required: true,
+      default: "",
     },
     tags: {
       type: "list",
       of: { type: "string" },
-      required: true,
+      required: false,
     },
     author: {
       type: 'nested',
@@ -68,4 +73,10 @@ export const Blog = defineDocumentType(() => ({
 
 
 
-export default makeSource({ contentDirPath: 'content', documentTypes: [Blog] })
+export default makeSource({ 
+  contentDirPath: 'content', 
+  documentTypes: [Blog],
+  mdx: {
+    remarkPlugins: [remarkGfm],
+  }
+})

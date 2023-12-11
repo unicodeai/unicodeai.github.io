@@ -17,8 +17,8 @@ const Footer = () => {
                   <LogoSVG />
                 </Link>
                 <p className="dark:text-body-color-dark mb-9 text-base leading-relaxed text-body-color">
-                Unicode is a standard character encoding that supports almost all writing systems in the world,
-                while Bijoy encoding is an encoding system widely used in specific regions for inputting and displaying Bengali.
+                  Unicode is a standard character encoding that supports almost all writing systems in the world,
+                  while Bijoy encoding is an encoding system widely used in specific regions for inputting and displaying Bengali.
                 </p>
                 <div className="flex items-center">
                   <a
@@ -84,17 +84,17 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Useful Links
+                  Blogs
                 </h2>
                 <ul>
-                  {/*<li>*/}
-                  {/*  <a*/}
-                  {/*    href="/blogs"*/}
-                  {/*    className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"*/}
-                  {/*  >*/}
-                  {/*    Blog*/}
-                  {/*  </a>*/}
-                  {/*</li>*/}
+                  <li>
+                    <a
+                      href="/blogs/utf16/"
+                      className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
+                    >
+                      utf16 文字 コード
+                    </a>
+                  </li>
                   {/*<li>*/}
                   {/*  <a*/}
                   {/*    href="/about"*/}

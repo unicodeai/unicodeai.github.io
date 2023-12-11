@@ -32,12 +32,12 @@ export default async function AboutPage({ params }: LangPageProps) {
   // const [count, setCount] = useState(0);
   return (
     <>
-      <Breadcrumb
-        pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
-      />
-      <AboutSectionOne />
-      <AboutSectionTwo />
+      <h1>unicode utf8変換</h1>
+      <p>xxxx</p>
+      <h2>什么是unicode</h2>
+      <p>xxxx</p>
+      <h2>什么是unicode</h2>
+      <p>xxxx</p>
 
     </>
   );
