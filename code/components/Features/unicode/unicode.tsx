@@ -8,7 +8,7 @@ import { ConvertToASCII } from "@/components/Features/unicode/uni2bijoy";
 const { TextArea } = Input;
 
 
-const Features = () => {
+const Features = (props) => {
   const [textValue1, setTextValue1] = useState("");
   const [textValue2, setTextValue2] = useState("");
 
@@ -31,11 +31,12 @@ const Features = () => {
           <div className="w-full px-4">
             <div className="wow fadeInUp mx-auto max-w-[800px] text-center" data-wow-delay=".2s">
               <h1
-                className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">unicode
-                to bijoy converter</h1>
+                className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                  {props.data.title}
+              </h1>
               <p
-                className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">Helps
-                you convert between Unicode and Bijoy via: unicode to bijoy converter .</p>
+                className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
+                  {props.data.description}</p>
             </div>
           </div>
         </div>

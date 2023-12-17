@@ -95,14 +95,7 @@ const Footer = () => {
                       utf16 文字 コード
                     </a>
                   </li>
-                  {/*<li>*/}
-                  {/*  <a*/}
-                  {/*    href="/about"*/}
-                  {/*    className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"*/}
-                  {/*  >*/}
-                  {/*    About*/}
-                  {/*  </a>*/}
-                  {/*</li>*/}
+
                 </ul>
               </div>
             </div>
@@ -113,14 +106,22 @@ const Footer = () => {
                   Futures
                 </h2>
                 <ul>
-                  {/*<li>*/}
-                  {/*  <a*/}
-                  {/*    href="/components"*/}
-                  {/*    className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"*/}
-                  {/*  >*/}
-                  {/*    Components*/}
-                  {/*  </a>*/}
-                  {/*</li>*/}
+                  <li>
+                    <a
+                      href="/krutidev/"
+                      className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
+                    >
+                      Online Krutidev to Unicode
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/krutidev/"
+                      className="dark:text-body-color-dark mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:hover:text-primary"
+                    >
+                      Online zawgyi to Unicode
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
